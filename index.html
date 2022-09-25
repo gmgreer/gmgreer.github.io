@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>treasurehunt</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="icon" type="image/x-icon" href=https://img.freepik.com/premium-vector/modern-gradient-dragon-illustration-dragon-logo-vector-icon_23758-685.jpg?w=2000 >
+</head>
+<body>
+    <div>
+        <div class="nav">
+            <img class="main-img" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Dragon.jpg" alt="red dragon">
+            <h1 class="title">Goblin Slayer</h1>
+            <img class="main-img" src="https://upload.wikimedia.org/wikipedia/commons/b/bb/Dragon.jpg" alt="red dragon">
+
+        </div>
+        <div class="rules">
+            <h3>Game Rules</h3>
+        <ul>
+         <li>kill the goblins find the treasure</li>
+         <li>If you find the dragon, you die</li>
+         <li>If you find the treasure you win</li>
+         <li>You only have six kills before the dragon finds you
+        </ul>
+        </div>
+        
+    </div>
+   <div class="score">
+    <h1 id="story" class="story">Kill the Goblins, Find their Treasure!</h1>
+   </div>
+   <div class="game-board">
+    <table id="game">
+        <tr>
+            <td id="0" class="selection" onclick='treasure(0)'><img src="https://static.wikia.nocookie.net/clashroyale/images/b/bd/GoblinsCard.png/revision/latest/top-crop/width/360/height/450?cb=20171212204756" width='80px'></td>
+            <td id="1" class="selection" onclick='treasure(1)' ><img src="https://static.wikia.nocookie.net/clashroyale/images/b/bd/GoblinsCard.png/revision/latest/top-crop/width/360/height/450?cb=20171212204756" width='80px'></td>
+            <td id="2" class="selection" onclick='treasure(2)' ><img src="https://static.wikia.nocookie.net/clashroyale/images/b/bd/GoblinsCard.png/revision/latest/top-crop/width/360/height/450?cb=20171212204756" width='80px'></td>
+            <td id="3" class="selection" onclick='treasure(3)' ><img src="https://static.wikia.nocookie.net/clashroyale/images/b/bd/GoblinsCard.png/revision/latest/top-crop/width/360/height/450?cb=20171212204756" width='80px'></td>
+        </tr>
+        <tr>
+            <td id="4" class="selection" onclick='treasure(4)' ><img src="https://static.wikia.nocookie.net/clashroyale/images/b/bd/GoblinsCard.png/revision/latest/top-crop/width/360/height/450?cb=20171212204756" width='80px'></td>
+            <td id="5" class="selection" onclick='treasure(5)' ><img src="https://static.wikia.nocookie.net/clashroyale/images/b/bd/GoblinsCard.png/revision/latest/top-crop/width/360/height/450?cb=20171212204756" width='80px'></td>
+            <td id="6" class="selection" onclick='treasure(6)' ><img src="https://static.wikia.nocookie.net/clashroyale/images/b/bd/GoblinsCard.png/revision/latest/top-crop/width/360/height/450?cb=20171212204756" width='80px'></td>
+            <td id="7" class="selection" onclick='treasure(7)' ><img src="https://static.wikia.nocookie.net/clashroyale/images/b/bd/GoblinsCard.png/revision/latest/top-crop/width/360/height/450?cb=20171212204756" width='80px'></td>
+        </tr>
+        <tr>
+            <td id="8" class="selection" onclick='treasure(8)' ><img src="https://static.wikia.nocookie.net/clashroyale/images/b/bd/GoblinsCard.png/revision/latest/top-crop/width/360/height/450?cb=20171212204756" width='80px'></td>
+            <td id="9" class="selection" onclick='treasure(9)' ><img src="https://static.wikia.nocookie.net/clashroyale/images/b/bd/GoblinsCard.png/revision/latest/top-crop/width/360/height/450?cb=20171212204756" width='80px'></td>
+            <td id="10" class="selection" onclick='treasure(10)' ><img src="https://static.wikia.nocookie.net/clashroyale/images/b/bd/GoblinsCard.png/revision/latest/top-crop/width/360/height/450?cb=20171212204756" width='80px'></td>
+            <td id="11" class="selection" onclick='treasure(11)' ><img src="https://static.wikia.nocookie.net/clashroyale/images/b/bd/GoblinsCard.png/revision/latest/top-crop/width/360/height/450?cb=20171212204756" width='80px'></td>
+        </tr>
+        <tr>
+            <td id="12" class="selection" onclick='treasure(12)' ><img src="https://static.wikia.nocookie.net/clashroyale/images/b/bd/GoblinsCard.png/revision/latest/top-crop/width/360/height/450?cb=20171212204756" width='80px'></td>
+            <td id="13" class="selection" onclick='treasure(13)' ><img src="https://static.wikia.nocookie.net/clashroyale/images/b/bd/GoblinsCard.png/revision/latest/top-crop/width/360/height/450?cb=20171212204756" width='80px'></td>
+            <td id="14" class="selection" onclick='treasure(14)' ><img src="https://static.wikia.nocookie.net/clashroyale/images/b/bd/GoblinsCard.png/revision/latest/top-crop/width/360/height/450?cb=20171212204756" width='80px'></td>
+            <td id="15" class="selection" onclick='treasure(15)' ><img src="https://static.wikia.nocookie.net/clashroyale/images/b/bd/GoblinsCard.png/revision/latest/top-crop/width/360/height/450?cb=20171212204756" width='80px'></td>
+        </tr>
+       </table>
+      
+ 
+   </div>
+   <div class="score">
+    <h3 id="won">Won: 0</h3>
+    <h3 id="kills">Kill Count: 0</h3>
+    <h3 id="lost">Lost: 0</h3>
+
+</div>
+<div class="button">
+    <button onclick="reset()" type="button">Restart</button>
+    <button onclick="dice()" type="button">Roll the Die</button>
+</div>
+   
+   <h3></h3>
+   
+   <h3></h3>
+    <footer><p>For more information click <a href="https://gameofthrones.fandom.com/wiki/Iron_Throne" target="_blank">Game of Thrones Fandom Website</a></p></footer>
+<script type="text/javascript" src="treasurehunt.js">    
+</script>
+</body>
+</html>
